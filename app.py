@@ -52,6 +52,6 @@ if prediction_proba > 0.5:
     st.error("The customer is likely to churn")
 else:
     st.success("The customer is not likely to churn")
-:
-    st.success("The customer is not likely to churn")
+
+
 
