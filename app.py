@@ -7,7 +7,7 @@ import tensorflow as tf
 model = tf.keras.models.load_model("model.h5")
 
 # Load preprocessor (ColumnTransformer pipeline)
-with open("saved_model/preprocessor.pkl", "rb") as f:
+with open("preprocessor.pkl", "rb") as f:
     preprocessor = pickle.load(f)
 
 # Streamlit UI
@@ -52,6 +52,7 @@ if prediction_proba > 0.5:
     st.error("The customer is likely to churn")
 else:
     st.success("The customer is not likely to churn")
+
 
 
 
